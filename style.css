@@ -1,0 +1,52 @@
+body{
+    background-color: wheat;
+    margin: 0px;
+}
+
+.middle{
+    margin:0px;
+    margin-left: 25rem;
+    margin-top: -10px;
+}
+
+.fav_btn{
+    margin-left:90%;
+    margin-top: 10px;
+    font-size: 1.5em;
+}
+#search_box{
+    border: 1px solid red;
+    outline: none;
+    text-indent: 5px;
+    height: 5%;
+    width: 20%;
+    border-radius: 30px;
+    margin-left: 32rem;
+    margin-top: 10px;
+
+}
+
+/*  for the search results displaying on search for a superhero */
+.search_result_container{
+    display: flex;
+    margin: 30px 80px 80px;
+    flex-wrap: wrap;
+}
+.search_rslt{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: rosybrown;
+    height: 200px;
+    width:350px;
+}
+.inner{
+    background-color: royalblue;
+    width: 130px;
+    margin-top: 15px;
+}
+#add_img > img{
+    width: 130px;
+    height:170px;
+    border-radius: 30%;
+    margin-top: 10px;
+}

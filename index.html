@@ -9,41 +9,46 @@
     <!-- creating the input boxes and fav button -->
             <div class="header_containier">
                 <button class="fav_btn">favourites</button>
-                <h1 class="middle">Which Superhero are you looking for?</h1>
+                <h1 class="middle">Who is Your Superhero?</h1>
             </div>
             <div class="search_container">
-                <input type="text" placeholder="Enter the name Here" id="search_box">
+                <input type="text" placeholder="Enter the Name Here" id="search_box">
                 <button class="enter" onclick="run()" class="search_btn" style="border-radius: 20%;">Enter</button>
             </div>
 
-            <div class="search_result_container">
-                <div class="search_rslt">
-                    <div>
-                        <div class="inner" id="name" style="margin-top: 30px;">
-                            Name
+
+            <div id="outer">
+                <template id="temp">
+                    <div class="main">
+                        <div id="text">
+                            <div class="inner" id="name" >
+                                Name
+                            </div>
+                            <div class="inner" id="hero_id">
+                                Id
+                            </div>
+                            <div class="inner" id="race">
+                                Race
+                            </div>
+                            <div class="inner" id="occu">
+                                Gender
+                            </div>
+                            <div class="inner" id="fav">
+                                <img src="https://cdn2.iconfinder.com/data/icons/inverticons-stroke-vol-3/32/bookmark_bookmarks_favorite_favorites_star-512.png" width="48px">
+                            </div>
                         </div>
-                        <div class="inner" id="hero_id">
-                            Id
-                        </div>
-                        <div class="inner" id="race">
-                            Race
-                        </div>
-                        <div class="inner" id="occu">
-                            Gender
+                        <div>
+                            <div id="add_img">
+                                <img>
+                            </div>
                         </div>
                     </div>
-                    
-                    <div id="add_img">
-                        <!-- for image -->
-                    </div>
-                    
-                    
-                </div>
+                </template>
             </div>
 
-
-
         </div>
+
+
         <script src="index.js"></script>
     </body>
 </html>

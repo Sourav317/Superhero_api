@@ -1,9 +1,6 @@
 const base_api = "https://www.superheroapi.com/api.php/";
 const api_key = "2184578135021546";
-var name_hero = document.getElementById("name");
-var hero_id =document.getElementById("hero_id");
-var gendr = document.getElementById("occu");
-var rce = document.getElementById("race");
+
 
 function run(){
     var Search_name = document.getElementById('search_box').value;
@@ -13,27 +10,24 @@ function run(){
     //fetching the JSON
     fetch(api_url)
         .then(res => res.json())
-        .then(res => {console.log(res); 
+        .then(res => {
+            console.log(res); 
 
-            var nme = res.results[0].name;
-            var id =res.results[0].id;
-            var race=res.results[0].appearance.race;
-            var gender=res.results[0].appearance.gender;
-            var image_url = res.results[0].image.url;
-            //console.log(nme);                 Name of the hero
+            var size = res.results.length;
 
-            //adding the values to HTML divs
-            name_hero.innerHTML+= ":" + nme;
-            hero_id.innerHTML+= ":" + id;
-            gendr.innerHTML +=":" + gender;
-            rce.innerHTML += ":" + race;
+            var clone_item = document.getElementById("temp");
+            for(let i=0;i<size;i++)
+            {
+            //adding data to template from the response
+            var card = clone_item.content.cloneNode(true);
+            card.getElementById("name").innerHTML = 'Name : ' + res.results[i].name;
+            card.getElementById("hero_id").innerHTML = 'Id : ' + res.results[i].id;
+            card.getElementById("add_img").children[0].src = res.results[i].image.url;
+            card.getElementById("race").innerHTML = 'Race : ' + res.results[i].appearance.race;
+            card.getElementById("occu").innerHTML = 'Gender : ' + res.results[i].appearance.gender;
+            document.getElementById("outer").appendChild(card);
+            }
 
-            //adding image to div
-            var img = document.createElement("img");
-            img.src = image_url;
-            var src = document.getElementById("add_img");
-            src.appendChild(img);
-            
 
         })
 }

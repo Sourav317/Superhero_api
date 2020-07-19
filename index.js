@@ -29,23 +29,23 @@ function run()
             
             //adding event listeners to all the data-fields
             card.getElementById("name").addEventListener('click',function(){
-                localStorage.setItem('about',res.results[i].name);
+                localStorage.setItem('about',res.results[i].id);
                 window.location.assign('./superhero_info.html');
             });
             card.getElementById("hero_id").addEventListener('click',function(){
-                localStorage.setItem('about',res.results[i].name);
+                localStorage.setItem('about',res.results[i].id);
                 window.location.assign('./superhero_info.html');
             });
             card.getElementById("add_img").children[0].addEventListener('click',function(){
-                localStorage.setItem('about',res.results[i].name);
+                localStorage.setItem('about',res.results[i].id);
                 window.location.assign('./superhero_info.html');
             });
             card.getElementById("race").addEventListener('click',function(){
-                localStorage.setItem('about',res.results[i].name);
+                localStorage.setItem('about',res.results[i].id);
                 window.location.assign('./superhero_info.html');
             });
             card.getElementById("occu").addEventListener('click',function(){
-                localStorage.setItem('about',res.results[i].name);
+                localStorage.setItem('about',res.results[i].id);
                 window.location.assign('./superhero_info.html');
             });
 

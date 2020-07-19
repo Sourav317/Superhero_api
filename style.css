@@ -78,6 +78,7 @@ input
 
 #add_img > img{
     width: 130px;
-    height:170px;
+    height:160px;
     border-radius: 30%;
+    margin-top: -10px;
 }
